@@ -1,0 +1,295 @@
+/* world-home.css - gaya khusus halaman portal world lore */
+
+.lore-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.lore-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #2c1a0f;
+    text-shadow: 0 0 5px rgba(255, 248, 225, 0.8);
+}
+.lore-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+}
+
+/* Two column layout */
+.lore-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+@media (max-width: 900px) {
+    .lore-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Category cards */
+.category-card {
+    background: rgba(250, 242, 220, 0.45);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(44, 26, 15, 0.3);
+    transition: all 0.3s ease;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    background: rgba(255, 248, 225, 0.65);
+}
+.category-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a0f08;
+    border-left: 4px solid #d4af37;
+    padding-left: 1rem;
+}
+.category-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.card-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.card-links a {
+    background: rgba(44, 26, 15, 0.7);
+    color: #f5ebd2;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.card-links a:hover {
+    background: #d4af37;
+    color: #1a0f08;
+    transform: translateY(-2px);
+}
+
+/* Sidebar facts */
+.sidebar-facts {
+    background: rgba(250, 242, 220, 0.35);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(44, 26, 15, 0.3);
+    height: fit-content;
+}
+.sidebar-facts h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.sidebar-facts ul {
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar-facts li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+.sidebar-facts li::before {
+    content: "✦";
+    color: #d4af37;
+    position: absolute;
+    left: 0;
+}
+.random-quote {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #d4af37;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Quick links */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.quick-link {
+    background: rgba(44, 26, 15, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    color: #f5ebd2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.quick-link:hover {
+    background: #d4af37;
+    color: #1a0f08;
+}
+
+/* Gaya tambahan untuk halaman lore */
+        .lore-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .lore-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #2c1a0f;
+            text-shadow: 0 0 5px rgba(255, 248, 225, 0.8);
+        }
+        .lore-header p {
+            max-width: 800px;
+            margin: 0.5rem auto 0;
+            font-size: 1.2rem;
+        }
+
+        /* Grid dua kolom untuk konten utama + sidebar */
+        .lore-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 900px) {
+            .lore-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Kartu kategori */
+        .category-card {
+            background: rgba(250, 242, 220, 0.45);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(44, 26, 15, 0.3);
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+            background: rgba(255, 248, 225, 0.65);
+        }
+        .category-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1a0f08;
+            border-left: 4px solid #d4af37;
+            padding-left: 1rem;
+        }
+        .category-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .card-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .card-links a {
+            background: rgba(44, 26, 15, 0.7);
+            color: #f5ebd2;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .card-links a:hover {
+            background: #d4af37;
+            color: #1a0f08;
+        }
+
+        /* Sidebar fakta */
+        .sidebar-facts {
+            background: rgba(250, 242, 220, 0.35);
+            backdrop-filter: blur(4px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid rgba(44, 26, 15, 0.3);
+            height: fit-content;
+        }
+        .sidebar-facts h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .sidebar-facts ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar-facts li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .sidebar-facts li::before {
+            content: "✦";
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+        }
+        .random-quote {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #d4af37;
+            font-style: italic;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Quick links */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .quick-link {
+            background: rgba(44, 26, 15, 0.5);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            color: #f5ebd2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .quick-link:hover {
+            background: #d4af37;
+            color: #1a0f08;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+        }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .category-card h3 {
+        font-size: 1.4rem;
+    }
+    .card-links a {
+        font-size: 0.8rem;
+    }
+}

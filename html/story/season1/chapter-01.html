@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lyskal: Chapter 1 — Ekspedisi ke Dalam Kegelapan</title>
+
+    <link rel="stylesheet" href="../../../css/global.css">
+
+    <style>
+        .chapter-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(250, 242, 220, 0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 28px;
+            padding: 3rem;
+            border: 1px solid rgba(44, 26, 15, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .chapter-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #1a0f08;
+        }
+
+        .chapter-meta {
+            text-align: center;
+            font-style: italic;
+            color: #4a3727;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 1rem;
+        }
+
+        .chapter-text h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.5rem 0;
+            color: #2c1a0f;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+            display: block;
+        }
+
+        .chapter-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-indent: 2rem;
+            color: #1a0f08;
+        }
+
+        .chapter-text p em {
+            color: #3e2a1c;
+        }
+
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(44, 26, 15, 0.3);
+        }
+
+        .nav-btn {
+            background: rgba(255, 248, 225, 0.6);
+            color: #1a0f08;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border: 1px solid #2c1a0f;
+            border-radius: 4px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover:not(.disabled) {
+            background: #2c1a0f;
+            color: #f5ebd2;
+        }
+
+        .nav-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <a href="../story-home.html" style="display: inline-block; margin-bottom: 2rem; text-decoration: none; color: #1a0f08; font-weight: bold; font-family: 'Cinzel', serif;">← Kembali ke Daftar Cerita</a>
+
+        <div class="chapter-container fade-scroll stay-visible">
+            <h1 class="chapter-title" id="judul-bab">Bab 1: Ekspedisi ke Dalam Kegelapan</h1>
+            <div class="chapter-meta">Mega Arc: Lyskal | Lokasi: Kerajaan Lachenwald & Dungeon Timur</div>
+
+            <div class="chapter-text">
+                <p>Kerajaan Lachenwald sedang sekarat, dan sayangnya, tidak ada satupun pedang yang bisa ditebas untuk menghentikannya.</p>
+                <p>Bukan karena wabah atau bencana alam yang tiba-tiba. Kematian ini datang merayap perlahan. Panen gandum di selatan layu sebelum menguning, tambang bijih besi di barat runtuh tanpa sebab, dan dari arah utara, agresi perbatasan yang dilakukan oleh Kerajaan Nyrdomh semakin brutal. Lachenwald perlahan dicekik dari segala arah, seolah dunia itu sendiri sedang berusaha menelan mereka hidup-hidup.</p>
+                <p>Di dalam ruang singgasana yang dingin dan mulai retak di sudut-sudutnya, Raja Aldric Van Lachenwald duduk dengan bahu merosot. Gurat kelelahan di wajahnya membuatnya terlihat sepuluh tahun lebih tua. Ia menatap putri semata wayangnya, matanya menyiratkan permohonan yang tak terucap.</p>
+                <p><em>"Ayana... apa kau benar-benar harus menempuh jalan ini?"</em> suaranya serak, menggema lemah di ruangan kosong itu.</p>
+                <p>"Tidak ada jalan lain, Ayahanda," jawab Putri Ayana Benedicta Van Lachenwald. Nada suaranya dijaga agar tetap datar, namun tangannya yang terkepal di balik jubah kebesarannya gemetar samar. "Dungeon kuno di perbatasan timur adalah satu-satunya wilayah yang tak tersentuh invasi Nyrdomh. Tempat itu tak pernah ditaklukkan selama berabad-abad. Jika kita bisa mengamankan sumber dayanya, Lachenwald bisa bernapas. Kita bisa membeli waktu."</p>
+                <p>Sang Raja memejamkan mata. "Itu dungeon yang diklasifikasikan setara mutlak, bahkan mungkin lebih tinggi. Mengirim 240 ksatria elit kita ke sana... itu sama saja membuang sisa kekuatan terakhir Lachenwald. Tingkat kematiannya bisa mencapai sembilan puluh persen, Ayana."</p>
+                <p>Ayana melangkah maju, berlutut dengan satu kaki di undakan singgasana. Ia menatap ayahnya lekat-lekat. "Jika aku tidak pergi, seratus persen rakyat kita akan mati kelaparan atau dibantai oleh pasukan Nyrdomh musim dingin nanti. Biarkan aku mengambil risiko yang sembilan puluh persen itu, Ayah."</p>
+                <p>“Namun Ayana, hanya kamulah yang memiliki kepercayaan penuh para rakyat. Bagaimana jika…kamu tidak berhasil…” Sang Raja dengan nada rendah mencoba untuk menahan Ayana pergi, namun Ayana hanya memperhatikan Ayahandanya, tekadnya telah bulat.</p>
+                <p>Tidak ada lagi yang bisa diperdebatkan. Ayana berdiri, memutar tubuhnya, dan melangkah keluar dari aula. Jubah kebesarannya berkibar pelan, membawa beban sebuah kerajaan berumur dua juta tahun di atas bahu mudanya.</p>
+
+                <h2>I. Mulut Kegelapan</h2>
+                <p>Dua minggu kemudian. Perbatasan Timur Lachenwald.</p>
+                <p>Di hadapan mereka, sebuah gua raksasa menganga di tebing batu kapur. Tidak ada ornamen, tidak ada gerbang megah, hanya celah gelap yang menghembuskan udara dingin yang terasa tidak wajar. Udara di sana begitu padat oleh mana purba hingga membuat para prajurit kesulitan bernapas, seakan ada sepasang mata raksasa tak kasatmata yang menatap mereka dari dalam kegelapan.</p>
+                <p>"Daftar hadir terakhir," lapor Kaelan, komandan berambut perak sekaligus pelayan pribadi Ayana. Ia adalah seorang petualang peringkat SSS yang mengabdi pada keluarga kerajaan. "Total 240 orang. Rincian: 193 peringkat SS hingga SS+, 35 peringkat SSS-, dan 12 peringkat SSS murni—termasuk aku dan Vasha."</p>
+                <p>Kaelan terdiam sejenak, melirik ke arah sudut perkemahan. "Dan... satu orang dengan peringkat SSS+."</p>
+                <p>Tatapan Ayana mengikuti arah pandang Kaelan. Di atas sebuah batu berlumut, seorang pria duduk menyendiri. Ia mengenakan topeng besi yang menutupi separuh wajahnya, tengah mengasah pedang dengan gerakan konstan yang aneh. Ia adalah tentara bayaran yang datang menawarkan diri secara sukarela dengan bayaran yang tidak masuk akal, hanya memberikan satu syarat: 'Aku ikut sampai dasar.'</p>
+                <p>"Aku masih tidak suka dengan keberadaannya," bisik Vasha, pelayan Ayana yang lain, matanya memicing curiga. "Tidak ada petualang waras yang mau masuk ke dungeon mati ini hanya demi uang."</p>
+                <p>"Kita tidak di sini untuk mencari teman yang waras, Vasha," sela Ayana tenang. "Kita hanya butuh pedangnya jika keadaan memburuk."</p>
+                <p>Ayana berjalan ke garis depan, menghadap dua ratus lebih prajurit dan penyihir terbaik yang dimiliki negerinya. Wajah-wajah mereka tegang, pucat oleh antisipasi kematian.</p>
+                <p>"Kalian semua tahu apa yang menanti di dalam," suara Ayana terdengar jernih, memecah kesunyian yang mencekam. "Menurut catatan kuno, dungeon ini memiliki 100 lantai dengan skala wilayah yang semakin tidak masuk akal di bawahnya. Ada mitos tentang iblis dan anomali yang membuat kekaisaran raksasa sekalipun enggan menyentuh tempat ini."</p>
+                <p>Ayana menarik napas panjang. Angin dari dalam gua membawa aroma yang ganjil—bau tanah basah yang bercampur dengan... aroma manis yang tipis yang aneh.</p>
+                <p>"Tapi Lachenwald sudah tidak punya kemewahan untuk merasa takut," lanjutnya tegas. "Kita masuk."</p>
+                <p>Tanpa keraguan, sang putri melangkah menembus batas kegelapan. Dua ratus empat puluh jiwa mengikutinya.</p>
+
+                <h2>II. Paranoia di Balik Kedamaian</h2>
+                <p>Antisipasi adalah siksaan yang paling kejam. Begitu mereka menjejakkan kaki di Lantai 1, seluruh formasi langsung mengencang. Para ksatria menghunus pedang hingga buku jari mereka memutih, para penyihir merapal perisai sihir berlapis-lapis.</p>
+                <p>Namun, yang menyambut mereka bukanlah gerombolan monster haus darah.</p>
+                <p>Lantai pertama adalah sebuah padang rumput zamrud yang membentang luas di bawah langit artifisial yang cerah. Di kejauhan, kincir angin berputar malas di sebuah desa berbatu. Penduduknya—makhluk humanoid bertelinga runcing dengan mata biru kehijauan yang indah—berjalan santai. Beberapa dari mereka menatap rombongan bersenjata lengkap itu, lalu tersenyum ramah dan melambai.</p>
+                <p>Tepat di hadapan Ayana, sebuah panel sihir transparan berdenting pelan.</p>
+                <p><em>[Quest Dungeon: Lantai 1] Laporkan kehadiran kalian kepada sang Penguasa Wilayah (Baron). Batas waktu: Tidak ada. Hadiah: Izin tinggal dan akses lintas lantai.</em></p>
+                <p>Ratusan prajurit terdiam kaku. Otak mereka tidak bisa memproses kontras antara rumor mematikan dan realita yang terasa seperti liburan musim semi ini. Namun, hal itu tidak berlangsung lama. Penurunan mereka menuju lantai-lantai bawah perlahan berubah menjadi ujian psikologis yang menyiksa.</p>
+                <p>Setiap lantai mereka turuni memiliki quest yang sama. Quest tersebut hanya menyuruh mereka untuk terus melaporkan diri mereka kepada penguasa lantai. Dimulai dari Baron dari lantai 1-25, kemudian Viscount hingga Marquiss, questnya selalu sama. Meskipun aura dan kekuatan sihir mereka terasa memiliki kekuatan yang sangat luar biasa, mereka semua tetap hanya membiarkan kami semua lewat.</p>
+                <p>Luas dungeon ini juga sangat tidak masuk akal. Setiap lantai yang mereka lewati, menghadirkan keanehan baru—dari makhluk berbadan kristal hingga naga kuno. Setiap Penguasa Lantai menerima mereka dengan sopan santun yang hampir konyol.</p>
+                <p>Namun, dari pecahan informasi yang Vasha dan para prajurit kumpulkan selama perjalanan mereka, realita yang sebenarnya mulai terkuak dan merayap ke tengkuk mereka.</p>
+                <p>"Penduduk setempat tertawa saat kami berasumsi mereka selalu sedamai ini," lapor Kaelan dengan wajah pucat di dekat api unggun Lantai 60. "Tempat ini bukan bekas medan perang kuno. Dungeon ini dibangun semata-mata sebagai cangkang isolasi untuk menahan energi luar biasa dari sebuah entitas primordial—sosok yang mereka sembah layaknya dewa pemberi nikmat absolut."</p>
+                <p>Vasha menelan ludah, melanjutkan, "Selama jutaan tahun, setiap spesies di sini berevolusi dari energi liar yang bocor itu. Mereka saling membantai, memusnahkan satu sama lain hanya untuk memperebutkan wilayah yang lebih dekat dengan Lantai 100. Semakin dekat dengan sumber anugerah itu, semakin kuat mereka berevolusi. Kedamaian konyol yang kita lihat ini baru terjadi ketika makhluk yang mereka sebut 'Kaisar' memaksakan hierarki absolut."</p>
+                <p>Ayana terdiam. Ia baru saja sadar, senyum ramah yang diberikan penduduk di setiap lantai bukanlah keramahan. Itu adalah upaya mati-matian monster buas yang menahan insting membunuh purba mereka karena takut pada aturan hierarki. Paranoia kini mencengkeram pasukan Lachenwald. Mereka merasa sedang berjalan di atas lautan bensin yang siap meledak kapan saja.</p>
+
+                <h2>III. Ujian Para Penguasa</h2>
+                <p>Tiga bulan sejak mereka masuk, sisa rombongan akhirnya menginjakkan kaki di area kekuasaan para Kaisar. Di sinilah teror mental yang sesungguhnya dimulai.</p>
+                <p>Ketika mereka mencapai lantai 95, seorang Raja yang sepertinya dari ras ular…atau mungkin malah imoogi, mengatakan peringatan keras kepada Ayana dan pasukannya, "Kalian sampai sejauh ini sudah sangat baik, namun kalian harus ingat. Para kaisar tidak pernah mengikuti aturan ini. Meskipun Quest yang ada didepan kalian hanya akan menyampaikan kedatangan, kalian harus bersiap dengan setiap kemungkinan terburuknya."</p>
+                <p>Mendengar perkataan sang Raja lantai 95, Ayana beserta prajuritnya langsung mematung dan mode siap bertempur kapanpun. Mereka seolah baru saja akan memasuki sarang dimana bahkan naga terlihat imut dan semut dilantai tidak dapat dipercayai. Dengan pemikiran yang sangat berpacu memikirkan apa saja kemungkinan yang akan terjadi, mereka mulai turun ke lantai berikutnya.</p>
+                <p>Lantai 96 – Kaisar Pertama. Aula itu sepanas kawah gunung berapi. Sosok wanita dengan rambut lava cair yang terus mengalir menatap mereka dari singgasananya. "Hiburan," desisnya, suaranya membuat udara mendidih. "Nyawa kalian setara dengan seberapa lebar aku bisa tersenyum. Jika kalian tidak dapat melakukannya, kalian akan ditenggelamkan di dalam danau laharku."</p>
+                <p>Ketegangan memuncak. Membunuhnya mustahil. Ayana terpaksa memerintahkan salah satu prajuritnya yang dulunya adalah mantan pemain akrobat jalanan. Prajurit itu dengan tangan gemetar melakukan atraksi juggling menggunakan belati sihir aktif, melukai jari-jarinya sendiri dengan sengaja hingga berdarah untuk menciptakan ilusi kembang api merah. Sang Kaisar wanita mendengus geli, sebuah senyum tipis terukir, dan pintu ke lantai berikutnya terbuka.</p>
+                <p>Lantai 97 – Kaisar Kedua. Ruangan ini terbuat dari cermin tanpa batas. Di tengahnya berdiri makhluk cahaya tanpa wajah yang memegang pedang transparan. "Tunjukkan padaku keindahan yang belum pernah dirusak oleh waktu," tuntutnya tanpa menggerakkan bibir.</p>
+                <p>Vasha melangkah maju. Sebagai pelayan elit, ia menghunus pedang rapier tipisnya dan membawakan 'Tarian Daun Gugur', teknik warisan turun-temurun Lachenwald. Vasha bergerak seperti bayangan, menebas udara ratusan kali dalam keheningan total. Di akhir tariannya, tiga pilar batu raksasa di belakang sang Kaisar terbelah menjadi dadu-dadu sempurna tanpa suara roboh sedikit pun. Makhluk cahaya itu menunduk hormat, memberikan jalan.</p>
+                <p>Lantai 98 – Kaisar Ketiga. Udara berbau perkamen tua dan tinta. Seorang lelaki tua dengan janggut menyapu lantai duduk bersila, dikelilingi oleh ribuan buku yang terbang mengitari tubuhnya seperti burung. Matanya buta putih, namun tatapannya seolah menembus jiwa mereka.</p>
+                <p>"Pertanyaan untuk sang pemimpin," suara lelaki tua itu bergema. "Apa yang lebih berat untuk dipikul oleh seorang fana? Takdir, atau Pilihan?"</p>
+                <p>Para prajurit menahan napas. Ayana melangkah maju, dagunya terangkat menantang tatapan buta itu. "Pilihan," jawab Ayana mantap. "Karena takdir tidak pernah membebani pundak mereka yang menolak untuk menyerah, namun pilihan sangat sulit dan memberatkan karena bukan hanya untuk mereka para pemimpin, namun untuk mereka juga yang dipimpin."</p>
+                <p>Lelaki tua itu terdiam lama, sebelum tawanya yang serak menggema. Buku-buku yang beterbangan menyibak, membuka jalan menuju lantai 99.</p>
+
+                <h2>IV. Teror Sejati di Lantai 99</h2>
+                <p>"Satu lagi," Ayana mengusap keringat di dahinya di depan gerbang Lantai 99. "Kaisar keempat, lalu kita mencapai dasar."</p>
+                <p>Namun, di Lantai 99, tidak ada ujian filosofis atau permintaan konyol. Aula itu sempit, gelap, dan berbau karat darah. Di atas singgasana besi hitam, sosok ramping berkulit sepucat porselen duduk membungkuk. Rambut putih panjangnya mengapung di udara tanpa halangan gravitasi.</p>
+                <p>"Kalian... berisik," bisik Kaisar keempat, mengangkat kepalanya. Matanya sepenuhnya hitam tanpa sklera. Suaranya terdengar seperti pecahan kaca yang digesekkan ke batu. "Aku bosan berpura-pura ramah. Aku akan membunuh kalian semua dalam sepuluh tarikan napas."</p>
+                <p>Aura membunuh meledak. Tekanannya mendekati peringkat Legendary (L) bahkan mungkin lebih. Ratusan ksatria Lachenwald terpaku, otot mereka menolak perintah otak. Kematian berdiri tepat di depan mata.</p>
+                <p>Namun, dari barisan belakang, suara logam yang dihunus memecah keheningan. Sang tentara bayaran bertopeng besi melangkah maju menembus tekanan aura tersebut. Langkahnya berat, namun pedangnya ditarik penuh. Di mata para ksatria Lachenwald, pria itu tampak seperti orang gila yang didorong oleh keserakahan absolut—seorang pria yang rela menantang maut demi harta dungeon. Tindakan nekat ini seketika menyapu bersih desas-desus liar bahwa ia adalah anjing suruhan kerajaan Nyrdomh.</p>
+                <p>"Cukup main-mainnya," geram tentara bayaran itu, bersiap menerjang.</p>
+                <p>Namun, sebelum kakinya sempat menjejak maju, udara di aula itu turun drastis hingga membekukan napas.</p>
+                <p>Tap. Tap. Tap.</p>
+                <p>Suara langkah kaki elegan turun dari tangga batu yang mengarah dari kegelapan Lantai 100. Seseorang berkulit pucat pasi dengan jas ekor panjang melangkah turun pelan. Matanya merah segar. Taring menyembul dari senyum tipisnya.</p>
+                <p>Kael melepaskan auranya yang dingin dan kuno. Dalam sekejap, tekanan sang Kaisar Keempat hancur berkeping-keping layaknya kaca tipis.</p>
+                <p>Sang tentara bayaran bertopeng besi, yang sedetik lalu tampak siap menantang maut demi harta, kini membeku total. Pedangnya bergetar hebat di tangannya. Ia tidak pura-pura ketakutan; insting bertahan hidupnya menjerit ngeri menyadari bahwa makhluk vampir yang baru saja turun ini bisa mencabut nyawanya sebelum ia sempat berkedip. Teror murni menguasai dirinya.</p>
+                <p>Kaisar Keempat tersentak mundur, singgasana karatan itu berderit ngeri. "Ka-Kau... Mengapa kau ada di sini?!"</p>
+                <p>"Menjemput tamu," Kael tersenyum tipis, taringnya berkilat. "Dan kau tahu aturannya. Tidak ada pembantaian sebelum mereka menghadap ke bawah."</p>
+                <p>Kael memalingkan wajahnya dari sang Kaisar, menoleh ke arah rombongan. Matanya yang semerah darah langsung mengunci tatapan Ayana, mengabaikan dua ratus prajurit lainnya. Pria itu membungkuk pelan dengan keanggunan seorang bangsawan malam.</p>
+                <p>"Namaku Kael," ucapnya lembut. "Maafkan ketidaksopanan serangga lantai ini kepada kalian... terutama kepadamu, Jiwa yang Beresonansi. Beliau sudah sangat lama menunggumu di bawah."</p>
+
+                <h2>V. Sang Penjaga Gerbang dan Gelombang Primordial</h2>
+                <p>Perjalanan melintasi tangga menuju Lantai 100 terasa seperti menembus selaput dimensi. Dinding di sekitar mereka berdenyut ritmis, menyerupai jaringan daging yang hidup.</p>
+                <p>Di ujung lorong, sebuah gerbang kristal hitam menjulang kokoh. Di depannya, berdiri sesosok Minotaurus setinggi lima meter. Bekas luka di sekujur ototnya memancarkan cahaya merah lava. Auranya tidak memiliki peringkat. Itu adalah kekuatan Unranked (U) yang murni dan buas.</p>
+                <p>"Berhenti," geram sang Minotaurus. Kapak raksasanya terangkat, membelah udara dengan suara dengungan yang mematikan. Kael melangkah santai. "Minggir, Penjaga. Dia adalah tamu yang dinantikan."</p>
+                <p>Hidung Minotaurus itu mendengus mengeluarkan uap panas. Ia justru mencengkeram kapaknya semakin erat, menatap Kael dengan permusuhan. "Tutup mulutmu, Kael. Kau tahu aturannya! Bahkan jika kau yang membawanya, tidak ada yang melangkah melewati gerbang ini tanpa mengalahkan kapakku! Tugasku adalah menguji kelayakan jiwa fana yang berani turun ke mari!"</p>
+                <p>Minotaurus itu mengambil kuda-kuda, siap meremukkan rombongan itu menjadi daging cincang. Kael hanya menghela napas, sama sekali tidak berniat repot-repot mengangkat tangan.</p>
+                <p>Kriiik.</p>
+                <p>Tiba-tiba, gerbang kristal hitam di belakang Minotaurus itu terbuka setebal rambut dari arah dalam.</p>
+                <p>BWOOOSH!</p>
+                <p>Udara meledak. Bukan ledakan api, melainkan hempasan energi primordial murni yang begitu pekat hingga pandangan memburam menjadi ungu gelap. Gerbang itu rupanya bukan sekadar pintu masuk, melainkan bendungan yang menahan sisa-sisa badai kekuatan dari makhluk yang bahkan tidak dapat dilihat puncak kekuatannya.</p>
+                <p>Hantaman energi itu menyapu barisan Lachenwald tanpa ampun. Ksatria dengan peringkat di bawah SSS- langsung bertumbangan layaknya daun kering. Sebagian muntah darah, sementara yang lain jatuh pingsan dengan mata terbalik, paru-paru mereka tidak sanggup memproses mana setebal itu. Bahkan para elit SSS- harus berlutut menahan kesadaran mereka agar tidak diremukkan.</p>
+                <p>Anehnya, Ayana tetap berdiri. Meski peringkatnya "hanya" SS+, angin badai ungu itu menerpa wajah dan jubahnya dengan lembut, seolah energi kuno itu mengenali kehadirannya dan menolak untuk menyakitinya.</p>
+                <p>Dari celah kecil yang terbuka itu, peri bersayap cairan bercahaya melesat keluar.</p>
+                <p>"Tahan senjatamu, Penjaga!" suara peri itu melengking tinggi memecah tekanan energi. "Sang Agung telah menjatuhkan titah. Hanya gadis itu yang boleh masuk. Putri Ayana dari Lachenwald. Sisanya, tetap di sini."</p>
+                <p>Mendengar perintah mutlak dari dalam, amarah di mata Minotaurus itu seketika padam. Ia langsung menurunkan kapaknya yang berat hingga menghantam tanah, lalu jatuh berlutut dan menundukkan kepalanya dalam-dalam, menyingkir dari jalan.</p>
+                <p>"Putri, ini bunuh diri!" Kaelan mengerang dari posisinya yang berlutut menahan tekanan.</p>
+                <p>Ayana yang meski sedikit kebingungan dikarenakan energi yang berputar disekitarnya, menepis kekhawatiran Kaelan. "Aku tidak membawa kalian kemari untuk mati di depan pintu. Tunggu saja di sini hingga aku membawa sesuatu dari dalam."</p>
+                <p>Tanpa menoleh lagi, Ayana melangkah melewati Minotaurus raksasa itu, menembus cahaya keemasan, dan membiarkan gerbang kristal hitam tertutup rapat di belakangnya.</p>
+
+                <h2>VI. Resonansi Dua Juta Tahun</h2>
+                <p>Ruangan di balik gerbang itu tidak terlihat seperti sebuah lantai bawah tanah, melainkan hamparan alam semesta tanpa batas. Ribuan rantai hitam tebal menjuntai dari ketiadaan di atas sana. Di sekeliling pusat ruangan, tujuh belas sosok berjubah duduk melayang dalam posisi meditasi.</p>
+                <p>Dan di tengah-tengah formasi itu, diikat oleh puluhan rantai terbesar, bukanlah wujud fisik seekor binatang buas berdarah dan berdaging. Bagi mata fana Ayana, apa yang terbaring di sana tampak seperti sesosok roh raksasa—sebuah jiwa dunia yang wujud kasarnya seolah telah lama terlucuti oleh penderitaan tanpa akhir. Ia memanifestasikan diri sebagai gumpalan energi murni yang begitu tebal, padat, dan bergejolak dahsyat hingga membengkokkan ruang di sekitarnya.</p>
+                <p>Di tengah pusaran badai roh tersebut, terbentuk sebuah wajah energi raksasa yang menyunggingkan senyum lebar nan hangat—esensi absolut dari sebuah Kebahagiaan. Namun, senyum agung itu menyajikan sebuah teror yang tragis. Dari kedua mata jiwa primordial tersebut, mengalir deras air mata gelap yang tak kunjung berhenti, menganak sungai membelah senyumannya tanpa suara.</p>
+                <p>Wujud roh itu memancarkan kontradiksi yang mutlak; sebuah eksistensi agung yang pada saat bersamaan terlihat begitu rapuh karena emosinya yang hancur dan saling mencabik. Tercekik oleh tekanan jiwa yang luar biasa dari kebahagiaan dan kesedihan yang tumpang tindih itu, kaki Ayana menyerah. Sang putri jatuh berlutut di hadapan roh kuno yang tengah menangis di balik senyumannya tersebut.</p>
+                <p>"Mendekatlah."</p>
+                <p>Suara itu tidak memantul di dinding ruangan, melainkan lahir langsung di dalam benak Ayana—hangat namun sarat kelelahan abadi. Dengan tubuh bergetar, Ayana memaksa dirinya berdiri dan berjalan pelan mendekati tumpukan rantai absolut tersebut.</p>
+                <p>"Si... siapa kau?" bisik Ayana.</p>
+                <p>"Mereka pernah menyebutku Kebahagiaan," suara di kepala Ayana terdengar lelah, sebuah senyum getir menggema di benaknya. "Tapi kini... aku hanyalah tahanan dari emosiku sendiri. Namaku—"</p>
+                <p>Seketika telinga Ayana berdenging hebat. Ia mendengar suara retakan guntur yang tuli, sebuah distorsi bising yang membuat kepalanya serasa mau pecah. Otak manusianya secara harfiah menolak menerjemahkan rangkaian suku kata yang baru saja diucapkan entitas itu. Nama sejati dewa primordial itu terlalu berat untuk ditampung oleh realitas fana.</p>
+                <p>Rantai-rantai raksasa itu tiba-tiba berderak hebat. Salah satu dari tujuh belas sosok berjubah membuka matanya—mata yang berisi badai galaksi—dan berbisik, "Resonansinya... dia benar-benar memilih anak ini."</p>
+                <p>Makhluk tersebut, yang terlihat seperti seekor singa raksasa, mengangkat satu lengan besarnya yang gemetar, lalu dengan sisa tenaga yang rapuh, menarik Ayana mendekat ke dalam dekapannya.</p>
+                <p>Seketika itu juga, pertahanan mental Ayana hancur. Semua ketakutan akan agresi Nyrdomh, beban kerajaannya yang sekarat, dan teror melintasi seratus lantai dungeon—semuanya menguap. Air mata mengalir deras. Di dalam dekapan itu, ia merasakan euforia kebahagiaan murni yang belum pernah ia rasakan seumur hidupnya.</p>
+                <p>Dan kebahagiaan absolut itu menular.</p>
+                <p>Udara di hamparan galaksi itu seolah membeku. Energi dari singa raksasa itu terdiam. Untuk pertama kalinya dalam dua juta tahun, rasa sakit dan duka yang mencengkeram relung jiwanya lenyap, tersapu oleh tangisan gadis di dekapannya.</p>
+                <p>KRAAAK!</p>
+                <p>Syarat mutlak itu terpenuhi. Rantai-rantai hitam yang diciptakan dari kekuatan Kesedihan bereaksi terhadap lenyapnya penderitaan sang Singa. Suara retakan itu tidak hanya menggema di udara, namun juga berdenging langsung di dalam jiwa setiap makhluk yang ada di ruangan itu.</p>
+                <p>Ketujuh belas sosok primordial berjubah yang melayang di sekeliling mereka serentak membuka mata, memancarkan keterkejutan kosmis. Beberapa dari mereka meneteskan air mata yang langsung menguap menjadi debu bintang. Dalam hitungan detik, belenggu absolut yang telah mengikat sang dewa primordial perlahan hancur menjadi serpihan debu berkarat, berhamburan menjadi ketiadaan.</p>
+                <p>Dalam pusaran debu itu, suara entitas tersebut berubah menjadi sangat lembut, penuh dengan kerinduan yang membakar.</p>
+                <p>"Aku mengakuimu. Melalui resonansi jiwa ini, kuberikan berkah terakhir dari wujud ini. Kau adalah Saintess-ku. Tolong, bawalah aku melihat dunia lagi... [■■■■■■■]."</p>
+                <p>Cahaya keemasan yang menyilaukan meledak dari tubuh raksasa singa tersebut, menyelimuti Ayana dengan kehangatan absolut. Begitu berkah itu dijatuhkan, tubuh raksasa sang Singa yang telah kehabisan energi setelah menyokong dunia selama jutaan tahun perlahan hancur menjadi serpihan cahaya bintang, terkompresi ke titik terkecil di pangkuan Ayana.</p>
+                <p>Cahaya perlahan meredup, meninggalkan keheningan. Ayana mengerjapkan matanya yang basah. Dekapan singa raksasa itu telah hilang. Sebagai gantinya, di atas pangkuannya, terbaring seekor anak singa mungil. Bulunya tipis, surainya baru tumbuh sedikit dengan warna oranye pucat, dan tulang rusuknya terlihat jelas. Makhluk kecil itu tertidur pulas.</p>
+                <p>Tujuh belas sosok primordial berjubah perlahan turun menjejak tanah. Tanpa suara, secara serentak mereka berlutut dengan satu kaki, menundukkan kepala dalam-dalam di hadapan gadis manusia itu.</p>
+                <p>"Akhirnya..." bisik salah satu dari mereka, suaranya bergetar menahan luapan emosi. "Sang Saintess telah membebaskannya."</p>
+
+                <h2>VII. Pulang</h2>
+                <p>Ketika gerbang kristal hitam kembali terbuka, rahang para prajurit Lachenwald jatuh. Putri mereka berjalan keluar dengan selamat, hanya menggendong seekor anak singa yang kurang gizi di pelukannya.</p>
+                <p>"Putri..." Kaelan terbata, masih berlutut menahan sisa tekanan energi. "Itu... apa?"</p>
+                <p>"Sebuah harapan," jawab Ayana pelan, mendekap makhluk rapuh itu.</p>
+                <p>"Di mana hartanya? Kita butuh sumber daya!" desak seorang kapten elit dengan wajah putus asa. "Jika kita tidak membawa apa-apa, pengorbanan ekspedisi ini sia-sia! Pasukan Nyrdomh akan membantai kita minggu depan!"</p>
+                <p>"Tutup mulutmu, Manusia," potong sang Minotaurus tajam, suaranya menggema menggetarkan dinding lantai 100.</p>
+                <p>Namun sebelum Minotaurus itu mengangkat kapaknya, Kael melangkah maju dari dalam bayangan. Vampir bangsawan itu tersenyum tipis, lalu melemparkan sebuah cincin hitam berukir huruf aneh ke arah Ayana. Sang putri menangkapnya dengan satu tangan.</p>
+                <p>"Beliau adalah Saintess dari Sang Ayah. Apakah kau pikir kami akan membiarkannya pulang dengan tangan kosong ke dunia atas?" ucap Kael dingin, melirik sang kapten manusia yang langsung pucat pasi.</p>
+                <p>Kael menatap Ayana dan membungkuk hormat. "Di dalam cincin spasial itu, ada sekelumit persembahan dari keempat Kaisar dan para penguasa lantai. Kristal mana tingkat murni, persenjataan pusaka yang tak pernah melihat cahaya selama jutaan tahun, dan material sihir yang... kurasa cukup untuk membeli kerajaan utara yang mengganggu kalian itu sepuluh kali lipat."</p>
+                <p>Mata Kaelan dan para ksatria yang tersisa terbelalak lebar. Kekayaan yang diucapkan vampir itu bukanlah sekadar harta, melainkan fondasi untuk membangun sebuah kekaisaran baru. Di barisan belakang, rahang sang tentara bayaran bertopeng besi mengeras. Tangannya yang tersembunyi di balik jubah mengepal erat hingga kukunya menembus kulit sarung tangannya. Misi awalnya untuk sekadar 'menjadi saksi kejatuhan Lachenwald' hancur berantakan. Ia sadar, gadis fana di depannya ini tidak hanya selamat dari neraka, tapi ia membawa kunci untuk mengubah peta kekuatan seluruh benua.</p>
+                <p>Ayana menggenggam cincin itu erat-erat. "Kalian memberiku kekuatan sebanyak ini... Apakah kalian tidak akan ikut bersamaku ke permukaan untuk menyaksikannya?" tanyanya ragu-ragu. Ia tahu, satu jentikan jari dari Kael atau sang Minotaurus cukup untuk meratakan pasukan invasi utara.</p>
+                <p>Minotaurus itu menggeleng pelan, kapak raksasanya diturunkan menyentuh lantai. "Kami tidak bisa, Saintess. Inti dari dunia bawah ini baru saja terangkat ke permukaan bersamamu. Tanpa Beliau yang menjadi jangkar, ekosistem seratus lantai ini akan terguncang."</p>
+                <p>"Para Tetua di dalam sana—Tujuh Belas Pengikut Terkuat—kini harus mengambil alih posisi Beliau, menopang dan mengunci fondasi dunia bawah ini agar neraka tidak tumpah ruah ke duniamu," Kael menambahkan, mata merahnya berkilat serius. "Tugas kami sekarang adalah memastikan rumah ini tetap utuh hingga saatnya tiba. Sisanya... kami percayakan padamu, Saintess."</p>
+                <p>Ayana tertegun. Ia memandang ke ujung lorong, menyadari besarnya pengorbanan entitas di bawah sana. Ia memang tidak membawa pasukan dewa maut bersamanya untuk perang esok hari. Hanya ada dia, ksatria yang tersisa, cincin di tangannya, dan makhluk kecil yang mendengkur pelan di pelukannya.</p>
+                <p>Tapi saat ia merasakan denyut energi magis yang hangat mengalir dari anak singa itu ke dalam jantungnya—sebuah aliran kekuatan murni yang diam-diam mulai merombak sirkulasi mana dan batas bakat pertumbuhannya secara eksponensial—ketakutan Ayana sirna. Kerajaan Lachenwald mungkin sedang sekarat, dan pion dari bayang-bayang kekaisaran raksasa yang misterius sudah menanti di luar sana. Namun dengan sumber daya di tangannya dan berkah primordial di jiwanya, saat Ayana melangkah kembali melintasi tangga batu untuk pulang, ia tahu takdir dunia tidak akan pernah sama lagi.</p>
+            </div>
+
+            <div class="chapter-nav">
+                <a href="#" class="nav-btn disabled">◀ Sebelumnya</a>
+                <a href="chapter-02.html" class="nav-btn">Selanjutnya ▶</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 — Lyskal: The Tale of Joy from Alkiaft | Bab 1</p>
+        </footer>
+    </div>
+
+    <audio id="bg-music" src="../../../assets/song/Majestic-ambience.mp3" loop preload="auto"></audio>
+
+    <script src="../../../js/global.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const wrapper = document.querySelector('.content-wrapper');
+            const container = document.querySelector('.chapter-container');
+            const bgMusic = document.getElementById('bg-music');
+            let isAudioPlaying = false;
+
+            if (wrapper) {
+                wrapper.style.opacity = "1";
+                wrapper.style.visibility = "visible";
+                wrapper.style.transform = "translateY(0)";
+            }
+            if (container) {
+                container.classList.add('visible');
+            }
+
+            function startAudio() {
+                if (isAudioPlaying) return;
+                if (bgMusic) {
+                    bgMusic.volume = 0.8;
+                    bgMusic.play().then(() => {
+                        isAudioPlaying = true;
+                    }).catch(e => console.log("Menunggu interaksi user untuk putar lagu..."));
+                }
+            }
+
+            document.addEventListener('click', startAudio, { once: true });
+            document.addEventListener('touchstart', startAudio, { once: true });
+            window.addEventListener('scroll', startAudio, { once: true });
+
+            window.addEventListener('scroll', function() {
+                if (container && !container.classList.contains('visible')) {
+                    container.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

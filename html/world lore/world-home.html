@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lyskal: World Lore - Kerajaan, Tanah Suci, dan Kekuatan</title>
+    <!-- Global CSS (sudah mencakup font, background, partikel, cursor, progress bar, dll) -->
+    <link rel="stylesheet" href="../../css/global.css">
+    <!-- CSS tambahan khusus untuk world-home -->
+     <link rel="stylesheet" href="../../css/world-home.css">
+</head>
+<body>
+
+<div class="content-wrapper">
+    <header>
+        <h1>⚜️ Lyskal ⚜️</h1>
+        <div class="tagline">World Lore — Kerajaan, Tanah Suci, dan Kekuatan Alam Semesta</div>
+    </header>
+
+    <!-- Navigasi global (mengacu ke halaman utama dan lainnya) -->
+    <div class="nav-links">
+        <a class="nav-link" href="../../html/Home.html">Beranda</a>
+        <a class="nav-link" href="../../html/lore%20karakter/karakter-home.html">Karakter</a>
+        <a class="nav-link" href="../../html/story/story-home.html">Cerita</a>
+        <a class="nav-link" href="../../html/world%20lore/world-home.html">World Lore</a>
+        <a class="nav-link" href="../../html/power%20system/world_home.html">Power System</a>
+    </div>
+
+    <div class="lore-header fade-scroll">
+        <h2>Menyelami Dunia Alkiaft</h2>
+        <p>Dari istana kerajaan yang selalu bangkit, tanah suci para dewa, hingga hukum alam yang mengatur tiap makhluk.</p>
+    </div>
+
+    <!-- Quick links anchor -->
+    <div class="quick-links fade-scroll">
+        <a href="#kingdom" class="quick-link">⛲ Kerajaan Lachenwald & Kekaisaran Timur</a>
+        <a href="#holyland" class="quick-link">🏔️ Holy Land & Tempat Dewa Awal</a>
+        <a href="#powersystem" class="quick-link">⚡ Power System & Sistem Ranking</a>
+    </div>
+
+    <div class="lore-grid">
+        <!-- Bagian konten utama -->
+        <div>
+            <div id="kingdom" class="category-card fade-scroll">
+                <h3>🏰 Kerajaan & Kekaisaran</h3>
+                <p>Alkiaft dihuni oleh berbagai entitas politik, mulai dari <strong>Kerajaan Lachenwald</strong> (kerajaan tertua yang selalu bangkit dari keterpurukan) hingga <strong>Kekaisaran Timur</strong> yang ambisius. Pelajari lebih lanjut tentang wilayah, penguasa, dan hubungan mereka dengan dungeon kuno.</p>
+                <div class="card-links">
+                    <a href="kingdom/lachenwald.html">Profil Lachenwald</a>
+                    <a href="kingdom/eastern-empire.html">Kekaisaran Timur</a>
+                    <a href="kingdom/neighboring-kingdoms.html">Kerajaan Lain</a>
+                </div>
+            </div>
+
+            <div id="holyland" class="category-card fade-scroll">
+                <h3>✨ Tanah Suci & Tempat Dewa Awal</h3>
+                <p>Tempat suci di mana <strong>16 dewa emosi</strong> (selain Lyskal) bersemayam. Juga terdapat <strong>Holy Land</strong> yang konon menjadi pusat kekuatan spiritual Alkiaft. Di sinilah para dewa beristirahat dan memantau keseimbangan dunia.</p>
+                <div class="card-links">
+                    <a href="holy-land/holy-land.html">Holy Land</a>
+                    <a href="holy-land/domain-of-gods.html">Domain of 16 Gods</a>
+                    <a href="holy-land/sealed-altar.html">Altar Penyegelan Lyskal</a>
+                </div>
+            </div>
+
+            <div id="powersystem" class="category-card fade-scroll">
+                <h3>⚙️ Power System & Sistem Ranking</h3>
+                <p>Sistem peringkat yang telah ada sebelum para dewa – dari Serangga hingga Bintang, serta misteri di atasnya. Juga dijelaskan bakat awal, bakat peningkatan, elemen, dan blessing Saintess.</p>
+                <div class="card-links">
+                    <a href="../power%20system/world_home.html">Overview Power System</a>
+                    <a href="../power%20system/ranking.html">Peringkat Lengkap</a>
+                    <a href="../power%20system/elements.html">Elemen & Energi</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar dengan fakta cepat dan kutipan acak -->
+        <div class="sidebar-facts fade-scroll">
+            <h4>📜 Fakta Cepat</h4>
+            <ul id="facts-list"></ul>  <!-- beri id, kosongkan -->
+            <div id="quote-box" class="random-quote"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 — Lyskal: The Tale of Joy from Alkiaft | Seluruh kontur dunia masih terus berkembang.</p>
+    </footer>
+</div>
+
+<!-- Background audio (opsional, jika ingin musik latar) -->
+<audio id="bg-music" src="../../assets/song/world-ambience.mp3" loop preload="auto"></audio>
+
+<!-- Global JS -->
+<script src="../../js/global.js"></script>
+<!-- Script spesifik untuk world-home: random quote dan autoplay audio (sama seperti home) -->
+<script src="../../js/world-home.js"></script>
+</body>
+</html>

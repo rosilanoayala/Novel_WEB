@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lyskal: The Tale of Joy from Alkiaft | Mega Arc Pertama</title>
+    
+    <link rel="stylesheet" href="../css/global.css">
+    
+    <style>
+
+        /* --- HANYA UNTUK HOME: Animasi Entry setelah Video --- */
+        .content-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                visibility 1.5s;
+}
+
+.content-wrapper.show-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+        /* --- Gaya Khusus Home --- */
+        .intro {
+            text-align: justify;
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+            background: rgba(250, 242, 220, 0.5);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(44, 26, 15, 0.2);
+            padding: 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: rgba(250, 242, 220, 0.45);
+            backdrop-filter: blur(5px);
+            padding: 1.8rem;
+            text-align: center;
+            border: 1px solid rgba(44, 26, 15, 0.4);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: #d4af37;
+            background: rgba(255, 248, 225, 0.75);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            background: rgba(255, 248, 225, 0.6);
+            color: #1a0f08;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid #2c1a0f;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            background: #2c1a0f;
+            color: #f5ebd2;
+        }
+
+        /* --- Styling Opening Video Overlay --- */
+        #video-opening {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #opening-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #skip-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 30px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+            z-index: 10000;
+            letter-spacing: 1px;
+        }
+
+        #skip-btn:hover {
+            background: #d4af37;
+            color: #000;
+            border-color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(44, 26, 15, 0.4);
+            font-size: 0.9rem;
+        }
+
+        /* --- Animasi Masuk (Entry Animation) --- */
+        /* Kondisi Awal: Sembunyikan dan turunkan posisinya 40px ke bawah */
+        .content-wrapper {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(40px);
+            /* Transisi halus selama 1.5 detik */
+            transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                        transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                        visibility 1.5s;
+        }
+
+        /* Kondisi Akhir: Dimunculkan oleh JavaScript setelah video selesai */
+        .content-wrapper.show-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="video-opening">
+        <video id="opening-video" preload="auto">
+            <source src="../assets/video/opening.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+        </video>
+        <button id="skip-btn">Skip Intro ⚜️</button>
+    </div>
+
+    <div class="content-wrapper">
+        <header>
+            <h1>⚜️ Lyskal ⚜️</h1>
+            <div class="tagline">The Tale of Joy from Alkiaft — Mega Arc Pertama</div>
+        </header>
+
+        <div class="nav-links">
+            <a class="nav-link" href="html/lore%20karakter/karakter-home.html">Karakter</a>
+            <a class="nav-link" href="story/story-home.html">Cerita</a>
+            <a class="nav-link" href="world%20lore/world-home.html">World Lore</a>
+            <a class="nav-link" href="power%20system/world_home.html">Power System</a>
+        </div>
+
+        <section class="intro fade-scroll">
+            <p>Selamat datang di <strong>Lyskal: The Tale of Joy from Alkiaft</strong> – Mega Arc pertama dari seri <strong>Lyskal</strong>. Dunia <strong>Alkiaft</strong> adalah sebuah planet anomali di pinggiran alam semesta <strong>Pancaloka</strong>. Di sini, bakat seseorang ditentukan sejak usia tujuh tahun — mulai dari peringkat Serangga hingga tingkat Bintang yang legendaris.</p>
+            <br>
+            <p><strong>Lyskal</strong> – Dewa Kebahagiaan, sulung dari 17 dewa – telah tersegel selama 2 juta tahun. Kini, Putri Ayana Benedicta Van Lachenwald tanpa sengaja menjadi Saintess Kebahagiaan. Bersama seekor anak werebeast berspesies Singa, ia harus menyembuhkan luka dewa dan membawa kembali keseimbangan ke Alkiaft.</p>
+            <br>
+            <p><em>Catatan: Web ini berisi spoiler besar untuk Mega Arc Alkiaft. Diperuntukkan bagi anggota Tier 1 (penulis & beta reader terpercaya).</em></p>
+        </section>
+
+        <div class="card-grid">
+            <div class="card fade-scroll">
+                <h3>📖 Cerita</h3>
+                <p>Ikuti Season 1 hingga 4 dari Bangkitnya Saintess hingga Akhir Kebahagiaan.</p>
+                <a href="story/story-home.html">Baca →</a>
+            </div>
+            <div class="card fade-scroll">
+                <h3>👥 Karakter</h3>
+                <p>Lyskal, Ayana, dan profil lengkap para karakter lainnya.</p>
+                <a href="html/lore%20karakter/karakter-home.html">Lihat →</a>
+            </div>
+            <div class="card fade-scroll">
+                <h3>🌍 World Lore</h3>
+                <p>Holy Land, kerajaan Lachenwald, dan misteri dungeon 100 lantai.</p>
+                <a href="world%20lore/world-home.html">Jelajahi →</a>
+            </div>
+            <div class="card fade-scroll">
+                <h3>⚡ Power System</h3>
+                <p>Sistem ranking, elemen, blessing Saintess, dan aturan Pancaloka.</p>
+                <a href="power%20system/world_home.html">Pelajari →</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 — Lyskal: The Tale of Joy from Alkiaft | Database Internal Tier 1 | Musik latar: Majestic Ambience</p>
+        </footer>
+    </div>
+
+    <audio id="bg-music" src="../assets/song/Majestic-ambience.mp3" loop preload="auto"></audio>
+
+    <script src="../js/global.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const openingOverlay = document.getElementById('video-opening');
+            const video = document.getElementById('opening-video');
+            const skipBtn = document.getElementById('skip-btn');
+            const music = document.getElementById('bg-music');
+
+            // --- FUNGSI UTAMA MUSIK ---
+            function playMainMusic() {
+                music.play().catch(err => {
+                    console.log("Musik butuh interaksi user untuk mulai.");
+                    // Jika autoplay musik diblokir browser, jalankan saat klik pertama kali di manapun
+                    document.addEventListener('click', () => music.play(), { once: true });
+                });
+            }
+
+            // --- FUNGSI TUTUP OVERLAY ---
+            function closeOpening() {
+                if (openingOverlay) {
+                    video.pause();
+                    openingOverlay.style.transition = "opacity 1.5s ease";
+                    openingOverlay.style.opacity = "0";
+                    
+                    setTimeout(() => {
+                        openingOverlay.remove();
+                        sessionStorage.setItem('introPlayed', 'true');
+                        
+                        // 1. Mulai musik
+                        playMainMusic();
+                        
+                        // 2. Memicu animasi konten utama melayang ke atas!
+                        document.querySelector('.content-wrapper').classList.add('show-content');
+                        
+                    }, 1500); // Menunggu overlay benar-benar memudar
+                }
+            }
+
+            // --- LOGIKA PEMUTARAN ---
+            
+            // Cek apakah sudah menonton di sesi ini
+            if (sessionStorage.getItem('introPlayed') === 'true') {
+                if (openingOverlay) openingOverlay.remove();
+                playMainMusic();
+                
+                // Memicu animasi konten naik jika membuka ulang halaman (Beri jeda sedikit agar CSS merender)
+                setTimeout(() => {
+                    document.querySelector('.content-wrapper').classList.add('show-content');
+                }, 100);
+                
+            } else {
+                // Jika belum, siapkan video
+                music.pause();
+                music.currentTime = 0;
+
+                // Coba putar video otomatis
+                video.play().catch(error => {
+                    console.log("Video butuh klik untuk mulai.");
+                    document.addEventListener('click', () => video.play(), { once: true });
+                });
+
+                // Event Listener untuk Selesai atau Skip
+                video.onended = closeOpening;
+                skipBtn.addEventListener('click', closeOpening);
+            }
+
+            // --- LOGIKA PEMUTARAN ---
+            
+            // 1. Cek apakah sudah menonton di sesi ini
+            if (sessionStorage.getItem('introPlayed') === 'true') {
+                if (openingOverlay) openingOverlay.remove();
+                playMainMusic(); // Langsung mainkan musik
+            } else {
+                // 2. Jika belum, siapkan video
+                music.pause(); // Pastikan musik mati saat video jalan
+                music.currentTime = 0;
+
+                // Coba putar video otomatis
+                video.play().catch(error => {
+                    console.log("Video butuh klik untuk mulai.");
+                    // Jika autoplay video diblokir, klik apa saja untuk mulai video
+                    document.addEventListener('click', () => video.play(), { once: true });
+                });
+
+                // 3. Event Listener untuk Selesai atau Skip
+                video.onended = closeOpening;
+                skipBtn.addEventListener('click', closeOpening);
+            }
+        });
+    </script>
+</body>
+</html>

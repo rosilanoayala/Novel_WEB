@@ -1,0 +1,334 @@
+/* global.css - Lyskal: Tale of Joy from Alkiaft */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+    --gold: #d4af37;
+    --gold-light: #f5e6a3;
+    --dark-bg: #1a0f08;
+    --text-dark: #1a0f08;
+    --text-light: #f5ebd2;
+    --glass-bg: rgba(250, 242, 220, 0.45);
+    --glass-blur: 6px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/image/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Crimson Text', 'Georgia', serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+/* custom cursor */
+.custom-cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease;
+    filter: drop-shadow(0 0 6px gold);
+}
+.custom-cursor i {
+    font-size: 32px;
+    color: var(--gold-light);
+    text-shadow: 0 0 5px orange;
+}
+
+/* golden pulse overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255, 215, 120, 0.25) 0%, rgba(255, 180, 60, 0.05) 60%, transparent 90%);
+    animation: goldenPulse 7s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* film grain */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjYiIG51bU9jdGF2ZXM9IjMiLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjZikiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=');
+    background-repeat: repeat;
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+/* partikel emas (dibuat oleh JS) */
+.dust-particle {
+    position: fixed;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.9), rgba(255, 160, 0, 0.4));
+    border-radius: 50%;
+    filter: blur(1px);
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    animation: floatDust linear infinite;
+    will-change: transform;
+}
+@keyframes floatDust {
+    0% { transform: translateY(100vh) translateX(-10vw) scale(0.6); opacity: 0; }
+    15% { opacity: 0.7; }
+    85% { opacity: 0.5; }
+    100% { transform: translateY(-20vh) translateX(20vw) scale(1.1); opacity: 0; }
+}
+@keyframes goldenPulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.9; }
+    100% { opacity: 0.5; }
+}
+
+/* scroll progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37, #f9e0a0);
+    z-index: 10000;
+    transition: width 0.1s;
+    box-shadow: 0 0 5px gold;
+}
+
+/* scroll to top button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 24px;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+.scroll-top-btn:hover {
+    background: var(--gold);
+    color: #1a0f08;
+    transform: scale(1.05);
+}
+
+/* kontainer utama */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: transparent;
+    min-height: 100vh;
+}
+
+/* navigasi universal */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(44, 26, 15, 0.4);
+}
+.nav-link {
+    font-family: 'Cinzel', serif;
+    color: #1a0f08;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.6rem 1.5rem;
+    background: rgba(255, 248, 225, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+    transition: all 0.3s;
+    border: 1px solid #2c1a0f;
+}
+.nav-link:hover {
+    background: #2c1a0f;
+    color: #f5ebd2;
+    box-shadow: 0 0 15px rgba(255, 215, 120, 0.4);
+    transform: translateY(-2px);
+}
+
+/* heading umum */
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+    color: #1a0f08;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 248, 225, 0.8);
+}
+.tagline {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    color: #2c1a0f;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 248, 225, 0.9);
+}
+
+/* efek glass card (opsional) */
+.glass-card {
+    background: rgba(250, 242, 220, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(44, 26, 15, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* fade-scroll untuk muncul/hilang saat scroll */
+.fade-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Progress Bar Mewah */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #d4af37, #ffecb3, #d4af37);
+    z-index: 10000;
+    transition: width 0.1s linear;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.8), 0 0 8px gold;
+    border-radius: 0 4px 4px 0;
+}
+/* Tambahan "debu" di progress bar */
+.scroll-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 8px;
+    height: 9px;
+    background: #ffd966;
+    filter: blur(2px);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulseGlow 1s infinite;
+}
+@keyframes pulseGlow {
+    0% { opacity: 0.3; transform: scale(1);}
+    100% { opacity: 1; transform: scale(1.2);}
+}
+
+/* Indikator persentase scroll (opsional) */
+.scroll-percent {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    font-family: 'Cinzel', monospace;
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: #ffecb3;
+    border: 1px solid #d4af37;
+    z-index: 10001;
+    pointer-events: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Custom Checkbox Gaya Fantasi (untuk formulir) */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    color: #1a0f08;
+    margin: 8px 0;
+}
+.custom-checkbox input {
+    display: none;
+}
+.checkbox-design {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d4af37;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+}
+.custom-checkbox input:checked + .checkbox-design {
+    background: #d4af37;
+    box-shadow: 0 0 6px gold;
+}
+.custom-checkbox input:checked + .checkbox-design::after {
+    content: '✓';
+    position: absolute;
+    top: -2px;
+    left: 4px;
+    color: #1a0f08;
+    font-size: 16px;
+    font-weight: bold;
+}
+.custom-checkbox:hover .checkbox-design {
+    transform: scale(1.05);
+    border-color: #ffecb3;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #ffd966; }
+
+/* responsive */
+@media (max-width: 768px) {
+    .content-wrapper { padding: 1.5rem 1rem; }
+    h1 { font-size: 2.2rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-link { font-size: 0.9rem; padding: 0.4rem 0.8rem; }
+}
